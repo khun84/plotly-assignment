@@ -1,0 +1,32 @@
+---
+title: "Plotly Assignment"
+author: "Daniel Lee"
+date: "4 Jan 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+```
+
+## Summary
+
+In this presentation, we will go through an example of using the **Plotly** package to produce some interactive data visualisation. The `iris` dataset will be used to produce a Plotly bar chart. We will plot the `species` on the x-axis and the `Sepal.Length` on the y-axis.
+
+## Result
+
+```{r 'plot bar chart',warning=F,message=F}
+p <- plot_ly(data = iris, x=~Species, y = ~Sepal.Length, type = 'bar', name = 'Species')
+p
+```
+
+## Appendix
+
+The R script to produce the previous **Plotly** plot is as followed.
+
+```{r 'appendix', echo=T,eval=F,tidy=T,tidy.opts=list(width.cutoff = 60)}
+p <- plot_ly(data = iris, x=~Species, y = ~Sepal.Length, type = 'bar', name = 'Species')
+p
+```
+
